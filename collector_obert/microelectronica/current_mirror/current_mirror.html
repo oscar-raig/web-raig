@@ -1,0 +1,195 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	<title>Current Mirror</title>
+	<meta name="description" content="Microelectrònica : Current Mirror" />
+	<meta name="keywords" content="Microelectronics,Current mirror"/>
+	<link rel="stylesheet" type="text/css" href="http://www.raig.cat/css_raig.css"/>
+	<meta name="robots" content="index, follow"/>
+	<meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0;">
+	</head>
+	
+	<body>
+		<div id="menu">
+			<div id="home">
+				<a href="http://www.raig.cat">Inici</a><a href="http://www.raig.cat/collector_obert/collector_obert_index.html">&nbsp; &gt;	&nbsp;collector_obert</a>
+				<a href="http://www.raig.cat/collector_obert/microelectronica/microelectronica_index.html">&nbsp; &gt;	&nbsp;microelectrònica</a>
+			</div>
+		</div>	
+		<div id="principal">
+			<div id="inside_principal">
+				<div id="principal_header">
+					<h1>Current Mirror</h1>
+					<a  href="http://www.raig.cat/imatges/cami.jpg">
+						<img width="720px"  src="http://www.raig.cat/thumbs/thumb_cami_50.jpg"/>
+					</a>
+				</div>
+				<div id="principal_body"> 
+					<ol>
+						<li><a class="anchor_boxes" href="#whatis">What is a Current Mirror?</a></li>
+						<li><a class="anchor_boxes" href="#purposecurrentmirror">What is the purpose of the current mirror?</a></li>
+						<li><a class="anchor_boxes" href="#current_gaint_of_a_current_source_bjt">Current Gain of a Current Source in a BJT</a></li>
+						<li><a class="anchor_boxes" href="#wilsoncurrentmirror">Wilson Current Mirror</a></li>
+					</ol>
+					<a name="whatis"></a>
+					<h2>What is a Current Mirror?</h2>
+					<p>A current mirror is a circuit designed to copy a current through 
+					one active device by controlling the current in another active device of a circuit,
+					keeping the output current constant regardless of loading.
+					The idea is something that reflex. The transistor of the figure is acting like a diode.
+					Then the Ie=Ieo e (Vbe/Vt). We can fix the current in the transistor. 
+					Ie= (V-VBE)/R. Then the second transistor as it has the same VBE Voltage It has the same Ie current</p>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/current_mirror.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Trying to modify slopes. Now the slopes are working with low Voltage values, and also the range
+								from 	10-8 to 10-4 is more lineal.
+							</td>
+						</tr>
+					</table>
+				
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/volt_amper_curve_at_current_mirror.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								The output current depends slightly on output voltage
+							</td>
+						</tr>
+					</table>
+					<a name="purposecurrentmirror"></a>
+					<h2>What is the purpose of the current mirror?</h2>
+					Resistors are very dificult to implement in the IC (Ref 5) due to the size constraints, so we use current mirrors and current sources for
+					bias amplifiers in ICs.
+					
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/transistor_behaviour.png"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Transistor behaviour
+							</td>
+						</tr>
+					</table>
+					
+					
+					<a name="current_gain_of_a_current_source_bjt"></a>
+					<h2>Current Gain of a Current Source in a BJT</h2>
+					
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/current_mirror_bjt_current_gain_schema.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Current mirror Circuit
+							</td>
+						</tr>
+					</table>
+					<p>In step 2 we are using the relation alfa*Ie= Ib; and Beta= alfa(1 - alfa);  alfa = Beta/(1 + Beta) </p>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/current_mirror_bjt_current_gain_formula.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Current mirror Circuit demostration
+							</td>
+						</tr>
+					</table>
+						<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/current_mirror_bjt_current_gain_final_formula.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Current mirror Circuit final relation
+							</td>
+						</tr>
+					</table>
+					<a name="wilsoncurrentmirror"></a>
+					<h2>Wilson Current Mirror</h2>
+					<h3>Wilson Current Mirror: BJT</h3>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/wilson_current_mirror_bjt.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Wilson Current Mirror BJT
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/wilson_current_mirror_bjt_formula.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Formula for Wilson Current Mirror BJT
+							</td>
+						</tr>
+					</table>
+					
+					<h3>Wilson Current Mirror: NMOS</h3>
+					<p> Current gain is not an issue in MOS circuits. The MOS Wilson mirror offer high ouptut resistence 
+					because of current feedback.
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/wilson_current_mirror_nmos.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Wilson Current Mirror MOS
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/current_mirror/images/current_mirror_mos_formula.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Wilson Current Mirror formula
+							</td>
+						</tr>
+					</table>
+					<p> The current mirrors are used to biasing transistors. Only using 1 resistor we can bias a transistor</p>
+					
+					<h2>Bibliografy</h2>
+					<p>Ref 1. Electronic Circuits : Analysis, Simulation, And Design. Norbert R. Malik. Prentice Hall Chapter 6.7 Current Sources</p>
+					<p>Ref 2. Analisis y Diseño de Circuitos Integrados Analogicos. Paul R.Gray / Robert Meyer. Capítulo 4. Fuentes de Corriente </p>
+					<p>Ref 3. <a  target="_blank" href="http://www.youtube.com/watch?v=62wmi8z7mnQ">Lecture - 1 Basic Building Blocks In Analog ICs ( Video )</a></p>
+					<p>Ref 4. <a  target="_blank" href="http://www.youtube.com/watch?v=vDCsZf2maKg">Lecture - 2 Current Mirrors ( Video )</a></p>
+					<p>Ref 5. <a  target="_blank" href="http://www.youtube.com/watch?v=ELmcTg22HfY">Intro to Current Mirrors and Current Sources ( Video )</a></p>
+					
+				</div>	
+			</div>
+		</div>	
+	</body>
+</html>

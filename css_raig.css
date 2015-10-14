@@ -1,0 +1,202 @@
+body 
+{
+	background-image:url(http://www.raig.cat/imatges/fons.gif);
+	font-family:Helvetica;
+	font-size:110%;
+}
+
+
+
+#principal {
+	background-color:#6699CC;
+	margin-left:auto;
+	margin-right:auto;
+	text-align:left;
+	width:75%;
+}
+@media  screen and (max-device-width: 480px) 
+{
+#principal {
+	width:100%;
+}
+.normal_img {
+    width: 100%;
+}
+
+}
+
+
+
+#subprincipal
+{
+	padding-left:50px;
+
+}
+
+
+#menu
+{
+	background-color:black;
+	position:absolute;
+	left:0;
+	top:0;
+	width:100%;
+}
+
+#home
+{
+	
+	padding-left:13%;
+	float:left;
+}
+
+#home a
+{
+	color:white;
+	text-decoration:none;
+}
+
+#breadcrumb
+{
+	background-color:black;
+	float:left;
+}
+
+
+
+#principal_header
+{
+	clear:left;
+	padding:10px;
+	padding-top:5px;
+}
+
+.bloc_esquerra
+{
+	background-color:#6699CC;
+	clear:left;
+	float:left;
+/*	padding:10px; */
+	width:50%;
+	height:100px;
+}
+
+.bloc_dreta
+{
+	background-color:#6699CC;
+	float:left;
+/*	padding:10px; */
+	width:50%;
+	height:100px;
+}
+
+#principal_footer 
+{
+	clear:left;
+	padding:10px;
+}
+
+#principal_body
+{
+	background-color:#6699CC;
+	clear:left;
+	width:750px;
+}
+
+
+.anchor_boxes
+{
+    color:black;
+    text-decoration:none;    
+}
+
+a:hover
+{
+    text-decoration:underline;    
+}
+
+
+.anchor_index
+{
+	color:black;
+}
+
+.a_links_interes
+{
+	display:block;
+	target:_blank; 
+}
+
+#inside_principal
+{
+	padding: 20px;
+}
+
+.letter_with_words
+{
+
+}
+
+.word
+{
+/*	float:left;
+	clear:left;
+*/
+}
+.word_meaning
+{
+	padding-left: 30px;
+/*	float:right; */
+	clear:righ;
+}
+
+.sub_word_meaning
+{
+/*	float:left; */
+	clear:right;
+}
+
+.info_challange
+{
+	margin-left: 60px;
+}
+
+.myhide
+{
+display:none;
+}
+
+.myshow
+{
+display:block;
+}
+
+.figure_table
+{
+	border-width:1px;
+	border-style: inset;
+}
+
+.figure_td
+{
+	border-width:1px;
+	border-style: inset;
+}
+
+.exercise
+{
+	
+}
+
+.exercise_question
+{
+	background-color:grey;
+}
+
+.exercise_solution
+{
+	background-color:white;
+}
+
+
+

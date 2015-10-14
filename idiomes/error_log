@@ -1,0 +1,5 @@
+[10-Apr-2011 10:01:39] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cookie - headers already sent by (output started at /home/oraig/public_html/idiomes/index_idiomes.php:15) in /home/oraig/public_html/idiomes/index_idiomes.php on line 19
+[10-Apr-2011 10:01:39] PHP Warning:  session_start() [<a href='function.session-start'>function.session-start</a>]: Cannot send session cache limiter - headers already sent (output started at /home/oraig/public_html/idiomes/index_idiomes.php:15) in /home/oraig/public_html/idiomes/index_idiomes.php on line 19
+[10-Apr-2011 10:07:20] PHP Parse error:  syntax error, unexpected $end in /home/oraig/public_html/idiomes/index_idiomes.php on line 53
+[10-Apr-2011 10:07:43] PHP Parse error:  syntax error, unexpected $end in /home/oraig/public_html/idiomes/index_idiomes.php on line 53
+[10-Apr-2011 10:07:46] PHP Parse error:  syntax error, unexpected $end in /home/oraig/public_html/idiomes/index_idiomes.php on line 53

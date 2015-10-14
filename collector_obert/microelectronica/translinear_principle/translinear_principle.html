@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	<title>Current Mirror</title>
+	<meta name="description" content="Microelectrònica : Translinear Principle" />
+	<meta name="keywords" content="Microelectronics,translinear principle"/>
+	<link rel="stylesheet" type="text/css" href="http://www.raig.cat/css_raig.css"/>
+	</head>
+	
+	<body>
+		<div id="menu">
+			<div id="home">
+				<a href="http://www.raig.cat">Inici</a><a href="http://www.raig.cat/collector_obert/collector_obert_index.html">&nbsp; &gt;	&nbsp;collector_obert</a>
+				<a href="http://www.raig.cat/collector_obert/microelectronica/microelectronica_index.html">&nbsp; &gt;	&nbsp;microelectrònica</a>
+			</div>
+		</div>	
+		<div id="principal">
+			<div id="inside_principal">
+				<div id="principal_header">
+					<h1>Translinear Principle</h1>
+					<a  href="http://www.raig.cat/imatges/cami.jpg">
+						<img width="720px"  src="http://www.raig.cat/thumbs/thumb_cami_50.jpg"/>
+					</a>
+				</div>
+				<div id="principal_body"> 
+					<ol>
+						<li><a class="anchor_boxes" href="#whatis">What is The Translinear principle</a></li>
+						<li><a class="anchor_boxes" href="#transistorpolaritzation">Transistor polaritzation</a></li>
+						<li><a class="anchor_boxes" href="#translinealexample">Translinear example</a></li>
+						<li><a class="anchor_boxes" href="#bjtastranslinealelement">BJT as translinear element</a></li>
+					</ol>
+					<a name="whatis"></a>
+					<h2>What is The Translinear principle?</h2>
+					<p>Ther is a loop in the figure. The kirschoff law say the sum of total voltage should be zero. Then the sum of the Vbe of the diods in the  clockwise direction, 
+					substracting the Vbe of the diods in the anticlocwise Vbe should be zero.</p>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_loop.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Loop	
+							</td>
+						</tr>
+					</table>
+				
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_sum_vbe1_vbe2.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Sum 0
+							</td>
+						</tr>
+					</table>
+					We have have this beatiful relation betwwen Ie and Vbe.
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_IE_VBE_relation.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Relation between IE and VBE
+							</td>
+						</tr>
+					</table>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_sum_vbe.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Translinear sum of Vbe
+							</td>
+						</tr>
+					</table>
+					<p>We can demostrate that the product of the currents of the diods in the clockwise direction are equal to the product of the 
+					current of the diods on the anticloccwise direction. And this is the translinear priciple. This is one powerful concept in Integrated
+					circuits and the father of the concept is <a href="http://en.wikipedia.org/wiki/Barrie_Gilbert">Gilbert</a> Exploiting the principle 
+					we are able to design multipliers, logaritmic amplifiers, squere reooters. The neural networks use this bocks, the transistor itserl can
+					act as a transducer.</p>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_sum_to_product_demostration.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								The sum to product demostration
+							</td>
+						</tr>
+					</table>
+					
+					<p></p>
+					<a name="whatis"></a>
+					<h2>Transistor Polaritzation</h2>
+					<p>There are tree ways of polarization of translinear circuits</p>
+					<ul>
+						<li>We force current in the collector adjusting the  gate voltag</li>
+						<li>We force current in the emitter adjusting the emitter current </li>
+						<li>We force current in hte collector adjusting the voltage in the emitter - Enz-Punzenberger - </li>
+					</ul>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_ways_polarization.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Ways for Polarization Current
+							</td>
+						</tr>
+					</table>
+					
+					
+					<a name="tranlinearexample"></a>
+					<h2>Translinear example</h2>
+					<p>This is an example of multiplier/divisor circuit, T1 and T3 are using the Enz-Punzengerger polarization</p>
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_example_schema.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Translinear example schema
+							</td>
+						</tr>
+					</table>
+					
+					<table>
+						<tr>
+							<td>
+								<img src="http://www.raig.cat/collector_obert/microelectronica/translinear_principle/images/translinear_example_formula.jpg"/>
+							</td>
+						</tr>
+						<tr>
+							<td>
+								Translinear example formula
+							</td>
+						</tr>
+					</table>
+					
+					<a name="bjtastranslinearelement"></a>
+					<h2>BJT as a translineal element</h2>
+					<p>If we are using BJT transistor as a tranlinear element, some characteristics, as the B gain or the resistence of the emitter,
+					affect negatively to the loop or are limiting the usable current.</p>
+					
+					<h2>Bibliografy</h2>
+					<p>Minimizing and Exploiting Leakage in VLSI Design</p>
+					<p><a target="_blank" href="http://www.youtube.com/watch?v=62wmi8z7mnQ">Lecture - 1 Basic Building Blocks In Analog ICs</a>
+				</div>	
+			</div>
+		</div>	
+	</body>
+</html>

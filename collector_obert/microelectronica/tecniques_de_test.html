@@ -1,0 +1,123 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html>
+	<head>
+	<title>Tècniques de Test</title>
+	<meta name="description" content="Microelectrònica : Tècniques de test" />
+	<meta name="keywords" content="Microelectrònica,Tècniques de test"/>
+	<link rel="stylesheet" type="text/css" href="http://www.raig.cat/css_raig.css">
+	</head>
+	
+	<body>
+		<div id="menu">
+			<div id="home">
+				<a href="http://www.raig.cat">Inici</a><a href="http://www.raig.cat/collector_obert/collector_obert_index.html">&nbsp; &gt;	&nbsp;collector_obert</a>
+				<a href="http://www.raig.cat/collector_obert/microelectronica/microelectronica_index.html">&nbsp; &gt;	&nbsp;microelectrònica</a>
+			</div>
+		</div>	
+		<div id="principal">
+			<div id="inside_principal">
+				<div id="principal_header">
+					<h1>Tècniques de test en Microelectr&ograve;nica</h1>
+					<a  href="http://www.raig.cat/imatges/cami.jpg">
+						<img width="720px"  src="http://www.raig.cat/thumbs/thumb_cami_50.jpg"</img>
+					</a>
+				</div>
+				<div id="principal_body"> 
+					<ol>
+						<li><a class="anchor_boxes" href="#introduccio">Introducci&oacute;</a><br></li>
+						<li><a class="anchor_boxes" href="#principis_del_test">Principis del test de fabricació</a><br></li>
+						<li><a class="anchor_boxes" href="#estrategies_de_disseny">Estratègies de disseny per a test</a><br></li>
+						<li><a class="anchor_boxes" href="#tecniques_de_autotest">Tècniques d' autotest</a><br></li>
+						<li><a class="anchor_boxes" href="#tecniques_de_sistema">Test a nivell de sistema</a><br></li>
+						<li><a class="anchor_boxes" href="#bibliografia">Bibliografia</a><br></li>
+					</ol>
+					<a name="introduccio"></a>
+					<h2>Introducció</h2>
+					<p>El procés de fabricació de circuits integrats (CI) no pot impedir que de forma inherent
+					apareguin defectes en alguns punts de les oblies que contenen els CI. És per això que
+					alguns d’aquests CI presentaran fallades. El cost que representa localitzar un CI amb
+					fallades augmenta de forma molt important amb el nivell. Si es detecta quan el xip
+					encara és a l’oblia, el cost és baix, però a mida que avança per les successives etapes de
+					producció el cost creix de forma exponencial, ja que es perd gran part del valor material
+					i d’esforç dedicat a aquell circuit. Per exemple, si el xip incorrecte està encapsulat i
+					soldat en un circuit imprès, en molts casos cal descartar tot el circuit imprès. Encara és
+					més costós no detectar la fallada fins que el CI és dins un sistema complet, o pitjor
+					encara, si la fallada no es manifesta fins que el sistema és en el camp d’aplicació. Un
+					cas extrem seria, per exemple, que el sistema s’embarqués en un satèl·lit.</p>
+					<h3>Necessitat del test</h3>
+					<h3>Test funcional</h3>
+					<h3>Test de fabricació</h3>
+					<p>Comprovació en el test de fabricació:</p>
+					<ul>
+						<li>Totes les portes canvien correctament als dos nivells lògics</li>
+						<li>Tots els registres poden magatzemar els dos estats</li>
+					</ul>
+					<p>Yield d’un procés: Percentatge de circuits que realitzen el
+					programa de test correctament.</p>
+					<hr/>
+					<a name="principis_del_test"></a>
+					<h2>Principis del test de fabricació</h2>
+					<ul>
+						<li>Models de Fallades</li>
+						<li>Cobertures de Fallades</li>
+						<li>Controlabilitat i Observabilitat</li>
+						<li>Generació automàtica de vectors de test</li>
+						<p>	Els valors lògics definits són 5:
+							<li> Nivells lògics 0 i 1</li>
+							<li> D: Diferència entre el valor lògic del circuit correcte (1) i del circuit amb fallada
+							(0).</li>
+
+							<li> /D : Diferència entre el valor lògic del circuit correcte (0) i del circuit amb
+							fallada (1).</li>
+							<li> X: Valor lògic indeterminat. No es coneix el valor lògic.</li>
+						</p>
+					</ul>
+					<a name="tecniques_de_sistema"></a>
+					<h2>Test a nivell de sistema</h2>
+					<p>Boundary Scan</p>
+					<p>Arquitectura Boundary Scan</p>
+					<p>Registre Boundary Scan</p>
+					<p>Test Access Port</p>
+					Interfície que cal afegir a un CI per suportar l’arquitectura IEEE 1149.
+					Quatre (més una opcional) línies d’un bit:
+					<ul>
+						<li> TCK (Test Clock Input). Marca el sincronisme durant el test.</li>
+						<li> TMS (Test Mode Select). Controla les operacions de test.</li>
+						<li> TDI (Test Data Input). Línia d’entrada sèrie de dades de test.</li>
+						<li> TDO (Test Data Output). Sortida sèrie de dades de test.</li>
+					</ul>
+					<br>
+					<ul>
+					<li> TRST (Test Reset). Senyal opcional d’inicialització asíncrona del
+					controlador del TAP.</li>
+					</ul>
+					<p>De tots els estats els tres fonamentals son:</p>
+					Capture-DR(IR),	Shift-DR(IR) 	Update-DR(IR)
+					<img src="http://www.raig.cat/collector_obert/microelectronica/imatges/bs_capture.jpg">
+					<img src="http://www.raig.cat/collector_obert/microelectronica/imatges/bs_shift_update.jpg">
+					
+					<p>Registre de Instrucció</p>
+					<p>Tal com s'acaba de veure, el registre d'instrucció determina l'operació que realitza el
+					TAP. L'allargada de l'IR està especificada en dos bits com a mínim, ja que es defineixen
+					tres instruccions obligatòries</p>
+					
+					<p>BYPASS. Codi IR = 1···1. Selecciona el registre de bypass, que és d'un sol bit,
+					de forma que el CI que se li programa aquesta instrucció deixa passar tota la
+					informació introduint un retard d'un únic cicle de rellotge. Això permet accedir
+					ràpidament a les cadenes de dades d'interès.</p>
+				
+					<p> EXTEST. Codi IR = 0···0. Permet realitzar el test dels circuits externs,
+					independentment dels circuits interns del xip.</p>
+					
+			 		<p>SAMPLE/PRELOAD. Selecciona el registre de perifèria (boundary-scan) a la
+					cadena DR de desplaçament i precarrega o mostreja les E/S del CI. D'aquesta
+					forma es poden mostrejar les dades que circulen per les entrades-sortides del xip,
+					o es poden precarregar vectors de test mentre el CI funciona normalment.</p>
+					<hr/>
+					<h2>Bibliografia</h2>
+					<p>Apunts de Sistemes Digitals II, Titulaci&oacute; Enginyeria Electr&ograve;nica, ETSETB ,UPC (2010)</p>
+				</div>	
+			</div>
+		</div>	
+	</body>
+</html>

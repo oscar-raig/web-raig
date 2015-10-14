@@ -1,0 +1,304 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"> 
+<html>
+	<head>
+	<title>Sistemes digitals</title>
+	<meta name="description" content="Sistemes digitals" />
+	<meta name="keywords" content="sistemes digitals, sistemes operatius en temps real,integritat del senyal,I2C, registre e,
+		resitre rs"/>
+	<link rel="stylesheet" type="text/css" href="http://www.raig.cat/css_raig.css">
+	</head>
+	
+	<body>
+		<div id="menu">
+			<div id="home">
+				<a href="http://www.raig.cat">Inici</a>
+				<a href="http://www.raig.cat/collector_obert/collector_obert_index.html">&nbsp; &gt;	&nbsp;collector_obert</a>
+			</div>
+		</div>
+		<div id="principal">
+		
+			<div id="inside_principal">
+				<h1>Sistemes Digitals</h1>
+				<ol>
+					<li><a href="#conceptes_general" class="anchor_boxes">Conceptes Generals</a></li>
+					<li><a href="#temporitzacio_sincronitzacio"  class="anchor_boxes">Temporitzaci&oacute; i Sincronitzaci&oacute;</a></li>
+					<li><a href="#metodes_comunicacio"  class="anchor_boxes">M&eacute;todes de Comunicaci&oacute; de Sistemes</a></li>
+					<li><a <a href="#inegritat" class="anchor_boxes">Integritat del senyal en el Disseny Digital</a></li>
+					<li><a href="#bibliografia" class="anchor_boxes">Bibliograf&iacute;a</a></li>
+				</ol>
+				
+				<a name="conceptes_general"></a>
+				<h2>Conceptes Generals</h2>
+				<ol>
+					<li><a href="#components_SD">Components d'un Sistema Digital</a></li>
+					<li><a>Subsistemes i la seva interconnexi&oacute;</a></li>
+					<li><a>Les CPV</a></li>
+					<li><a>Subsistemes de mem&ograve;ria</a></li>
+					<li><a>Subsitemes d' E/S</a></li>
+					<li><a href="#components_so_temps_real">Sistemes operatius en temps real</a></li>
+				</ol>
+				<a name="components_SD"></a>
+				<h3>Components d'un sistema Digital</h3>
+				
+				<p> Parts d'un sistema digital <p>
+				<ul>
+					<li>Sensors i actuadors</li>
+					<li>Coversors A/D i D/A</li>
+					<li>Microprocessadors i elements lógics configurables</li>
+					<li>Mem&ograve;ria</li>
+				</ul>
+				<a name="components_so_temps_real"></a>
+				<h3>Sistemes operatius en temps real</h3>
+				<p> Qu&egrave; fa un sistema operatiu?</p>
+				Supervisar recursos i funcions
+				<ul>
+					<li>Gestionar la mem&ograve;ria</li>
+					<li>Gestionar les entrades/sortides</li>
+					<li>Crear i Gestionar Fitxers</li>
+					<li>Controlar l' execuci&oacute; de programes</li>
+					<li>Proporcionar l'interficie d'usuari</li>
+				</ul>
+				<p> Qu&egrave; un sistema operatiu en temps real (RTOS) </p>
+				<p>En un sistema en el que el temp &eacute;s cr&iactue;tic</p>
+				<ul>
+					<li>Processos sensibles al retard</li>
+					<li>Execuci&oacute; simult&agrave;nea de processos</li>
+					<li>Comunicaci&oacute; entre processos</li>
+					<li>Assignaci&oacute; din&agrave;mica de recursos</li>
+					<li>Assignaci&oacute; din&agrave;mica de prioritats</li>
+				</ul>
+				
+				
+				
+				<p> Característiques d'un RTOS </p>
+				<ul>
+					<li>Multitasca</li>
+					<li>Modular</li>
+					<li>Control Total del Sistema</li>
+					<ul>
+						<li>Control de la mem&ograve;ria</li>
+						<li>Control de les interrupcions</li>
+						<li>Control dels perif&eacute;rics(Drivers)</li>
+					</ul>	
+				</ul>
+				
+				<h3>Comunicacions en el sistema</h3>
+				<p>SISTEMA = ELEMENTS + INTERCONNEXI&Oacute;</p>
+				
+				<p>Classificaci&oacute; dels busos</p>
+				<ol>
+					<li>Per la connectivitat</li>
+					<li>Per la funcionalitat</li>
+					<li>Per la sincronitzaci&oacute;</li>
+					<li>Per la tipologia </li>
+				</ol>
+			
+				<h4>Bus AMBA: Advanced microcontroller Bus Architecture</h4>
+				<p> AHB: Altes prestacions</p>
+				<p> ASB: Prestacions Mitges </p>
+				<p> APB: Per Perif&egrave;rics</p>
+				
+				<a name="temporitzacio_sincronitzacio"></a>
+				<h2>Temporitzaci&oacute; i Sincronitzaci&oacute;</h2>
+				<ol>
+					<li>Aspectes temporals</li>
+					<li>Principis de disseny Digital Síncron</li>
+					<li><a href="#seguiment_recuperacio">Seguiment i recuperació de senyals de rellotge</a></li>
+					<li>Distribució de senyals de rellotge</li>
+				</ol>
+				
+				
+				<h3>Aspectes temporals</h3>
+				<p>Retard inercial</p>
+				<p>Retard de transport</p>
+				
+				<p>Registres actius per nivells (latches)</p>
+				<p>La estructura bàsica d'un latch està constituït per una
+				cel.la de memòria estàtica a la qual s'han afegit dues portes de 
+				transmissió CMOS (TG Transmission Gates) controlades pel senyal de rellotge, clk.</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/d_latch_1.jpg">
+				<p>El  temps de setup és el temps que necessita el condensador per carregar-se amb el valor
+				de la senyal D.</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/d_latch_2.jpg">
+				<p>El temps de hold és el temps que el senyal D ha de romandre estable després del 
+				al canvi de senyal de rellotge</p>
+				<p>Registre E( amb habilitació)</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/registre_e.jpg">
+				<p>Registre T( Toggle):Inversió del valor que te registrat</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/registre_t.jpg">
+				<p>Registre RS(Reset / Set)</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/registre_rs.jpg">
+				<p>Codificació d'estats</p>
+				<p>Codificació one-hot: 01 10</p>
+				
+				<p>Tècniques de disseny a evitar</p>
+				<p>Multiplicació de freqüencia</p>
+				<p>Divisió de freqüència : Factor 2</p>
+				<p>Divisió de freqüència : Qualsevol factor</p>
+				
+				<a name="seguiment_recuperacio"></a>
+				<h3>Seguiment i recuperació de senyals de rellotge</h3>
+				
+				<h4>Sincronització de rellotge</h4>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/sincro_rell_3.jpg">
+				<p>A la part superior de la imatge es mostra el exemple corresponent a una possible solució per evitar 
+				errors de sincronització. En aquest exemple s’utilitza un segon registre per esperar a que el sistema 
+				hagi arribat a un estat estable. És a dir, amb aquest segon registre el temps d’espera a que el 
+				sincronitzador arribi a un estat estable és el període de rellotge del sistema.</p>
+				
+				<h4>Comparador de fase </h4>
+				<p>Funció: Mesura del retard (fase) relatiu entre dos senyals</p>
+				<p>Comparador de fase basat en funcions XOR</p>
+				<p>Comparador de fase basat en registres</p>
+				
+				<h4>Recuperació del rellotge per sobremostreig</h4>
+				<p>Consideracions sobre el sobremostreig</p>
+				<p>Realització per a N=3, finestres de 12 bits</p>
+				<p>Realització alternativa (protocol LIN)</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/sincro_rell_1.jpg">
+				<p>Una realització alternativa per recuperar el senyal de rellotge és la que 
+				s'utilitza al protocol LIN 	(Local Interconnect Network - 
+				bus sèrie de baixa velocitat utilitzat a la indústria de l'automòbil.
+				Dins d'aquest protocol cada trama de dades 
+				porta associat un camp de sincronisme. Dins d'aquest camp de sincronisme, delimitat per un bit de 
+				start un bit de stop, s'envia un byte de dades amb valor hexadecimal 0x55 (és a dir, una seqüència 
+				alternada de valors lògics '1' i '0'). La figura situada a la part inferior de la imatge mostra la 
+				seqüència corresponent a aquest camp de sincronisme. Com es pot deduir fàcilment, exceptuant el 
+				bit de start, dins d'aquest camp de sincronisme es produeixen 4 flancs de baixada al senyal de dades.
+				Per tant, en	aquest cas la recuperació del senyal de rellotge (és a dir, la determinació de la posició 
+				òptima de mostreig de senyal de dades) consistirà en determinar quants cicles de rellotge del 
+				sistema receptor es produeixen dins de l'interval corresponent a aquests 4 flancs de baixada. A partir 
+				d'aquest valor es podrà determinar fàcilment el valor del factor de sobremostreig efectiu, que serà 
+				directament aquest valor dividit per 4 (és a dir, el valor final del compteig descartant el dos bits 
+				menys significatius i afegit - per no tenir problemes d'arrodoniment - el bit menys significatiu 
+				descartat).</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/sincro_rell_2.jpg">
+				
+				<p>Realització (sobremostreig x4)</p>
+				
+				Hi a un bloc que detecta els flancs de baixada ( falling edges )
+				
+				</p>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/enunc_prob_sd2_3.jpg"> Enunciat Problema</a>
+				<br/>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/sd2_problema_3.jpg"> Resolució del problema</a>
+				
+				
+				<h3>Distribució de senyals de rellotge</h3>
+				<ol> 
+					<li>Distribució del rellotge dins el sistema (off chip) </li>
+					<li>Ajust/compensació de les línies</li>
+					<li>Distribució del rellotge amb DLLs</li>
+					<li>Distribució del rellotge basada en línies de transmissió</li>					
+				</ol>
+				<p>Objectiu: Distribuïr un senyal de rellotge a tots els elements 
+				de memòria d'un domini de rellotge amb uns valors de skew i jitter mínims</p>
+				
+				<p>Skew: Component contínua del soroll temporal, deguda
+				a línies de diferent longitud o a variació dels paràmetres dels components del
+				sistema </p>
+				<p>Jitter: Component en alterna del soroll temporal, degut al soroll 
+				d'alimentació o al soroll aditiu.
+				
+				<hr/>
+				<a name="metodes_comunicacio"></a>
+				<h3>M&eacute;todes de Comunicaci&oacute; de Sistemes</h3>
+				<ul>
+					<li>Components d'uns sistema de comunicació</li>
+					<li>Senyalització</li>
+					<li>Protocols de comunicació sèrie i paral.lel</li>
+					<ul>
+						<li>Exemples de comunicació sèrie (I2c, CAN, UART)</li>
+						<li>Estàndards de comunicació en paral.lel de sistemes (AMBA, Wishbone, CoreConnect)</li>
+					</ul>
+				</ul>
+				
+				<h4>Components d'un sistema de comunicacions</h4>
+				<p>Organització d'un sistema de comunicacions</p>
+				<p>Síntesi de freqüencia</p>
+				<p>Estructura bàsica d'un divisor de freqüència</p>
+				<p>Pre-scaler (divisió per 2n): Comptador binari sincron</p>
+				<p>Scaler (divisió per qualsevol valor sencer</p>
+				<p>Ordenació temporal de seqüències de senyals</p>
+				<p>Timers</p>
+				<p>Watchdogs</p>
+				<p>Problemes de la divisiço de freqüència</p>
+				<p>Principi de la síntesi digital directa</p>
+				<h4>Senyalització</h4>
+				<p>Senyalització Dual-Rail</p>
+				<p>Senyalització amb rellotge</p>
+				<p>Senyalització ternària</p>
+				
+				<h4>Protocols de comunicació sèrie i paral.lel</h4>
+				<p>Bus I2C</p>
+				<p>Transferència de dades</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/i2c_transferencia_dades.jpg">
+				<p>Quan un dispositiu master desitja iniciar una transferència de dades, en primer
+				lloc haurà de generar una condició d'inici, tal i com ja s'ha explicat anteriorment. A
+				continuació, haurà d'especificar l'adreça del dispositiu slave amb el que s'ha d'establir la
+				comunicació. Aquesta adreça consta de 7 bits, i són transmesos de més a menys
+				significatiu. Després d'aquesta adreça, el dispositiu  master envia un bit, anomenat
+				R_WN, que indica el sentit de la comunicació. Així, si el dispositiu master vol enviar
+				dades al dispositiu  slave, haurà de fer que R_WN=0, mentre que si vol rebre dades
+				haurà de fer que R_WN=1. El dispositiu slave adreçat pel master haurà d'emetre un bit
+				de reconeixement d'adreça (que consistirà en forçar un nivell 0 a la línia SDA), indicat
+				que es troba disponible per rebre o enviar dades. Les dades transmeses al protocol I2C
+				consten de 8 bits, i són transmesos també de més a menys significatiu. La figura 5
+				mostra la seqüència corresponent a un procés de transferència de dades seguint el
+				protocol de bus sèrie I2C.
+				Un dispositiu master pot enviar diverses dades seguides a un mateix slave sense
+				necessitat de generar novament una condició d'inici o d'aturada. El nombre de dades que
+				es poden transmetre d'aquesta manera és il·limitat, però cada dada haurà d'ésser
+				reconeguda pel dispositiu  slave. Si un dispositiu no està en condicions de rebre una
+				
+				nova dada (per exemple, per que ha d'acabar una tasca interna), pot fer que el dispositiu
+				emissor passi a un estat d'espera forçant un nivell baix a la línia SCL. La transferència
+				pot continuar quan el receptor estigui preparat per rebre una nova dada i hagi alliberat la
+				línia SCL.
+				També és possible que un dispositiu master que estigui en possessió del bus
+				pugui establir comunicació amb un dispositiu slave diferent, generant una nova condició
+				d'inici després del bit de reconeixement de l'última dada, sense necessitat de generar una
+				nova condició d'aturada.
+				</p>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/enunc_prob_sd2_39.jpg"> Enunciat Problema</a>
+				<br/>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/pdf/sd2_problema_39.pdf"> Resolució del problema</a>
+				
+				<hr/>
+				<a name="inegritat"></a>
+				<h3>Integritat del senyal en el Disseny Digital</h3>
+				<h4>Els senyals</h4>
+				<h4>Soroll</h4>
+				<h4>Marges de soroll</h4>
+				<h4>Marge de seguretat real</h4>
+				<h4>Inmunitat de soroll en AC</h4>
+				<h4>Soroll DC: Tensió d'alimentació</h4>
+				<h4>Soroll DC: Temperatura</h4>
+				<h4>Espectre del senyal digital</h4>
+				<h4>Fil o linia de transmissió</h4>
+				<h4>Línia de transmissió sense perdues</h4>
+				<p>En els circuits impresos, i en general en tots els mitjans de connexió emprats 
+				en la construcció d’un sistema, ES PODEN MENYSPREAR LES PERDUES</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/lt_1.jpg">
+				<h4>Linia carregada </h4>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/lt_3.jpg">
+				<br/>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/enunc_prob_sd2_40.jpg"> Enunciat Problema</a>
+				<br/>
+				<a href="http://www.raig.cat/collector_obert/sistemes_digitals/pdf/sd2_problema_40.pdf"> Resolució del problema</a>
+				<h4>El problema dels drivers</h4>
+				
+				<p>Si considerem que els transmissors (drivers) poden donar un corrent de sortida 
+				limitat, el salt de tensió valdrà.</p>
+				<img src="http://www.raig.cat/collector_obert/sistemes_digitals/imatges/lt_2.jpg">
+				<hr/>
+				<a name="bibliografia"></a>
+				<h3>Bibliograf&iacute;a</h3>
+				<p>Apunts de Sistemes Digitals II, Titulaci&oacute; Enginyeria Electr&ograve;nica, ETSETB ,UPC (2010)</p>
+				</p>Ronald W. Knepper 
+					<a href="http://people.bu.edu/rknepper/sc571/class.html"> SC571 VLSI Design Principles (Spring 2002) </a></p>
+			</div>
+		</div>	
+	</body>
+</html>
+
