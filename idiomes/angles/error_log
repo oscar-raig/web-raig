@@ -1,7 +1,0 @@
-[01-Feb-2011 17:26:22] PHP Parse error:  syntax error, unexpected $end in /home/oraig/public_html/idiomes/angles/words.php on line 33
-[01-Feb-2011 17:29:54] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/oraig/public_html/idiomes/angles/words.php on line 28
-[01-Feb-2011 17:32:18] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/oraig/public_html/idiomes/angles/words.php on line 28
-[01-Feb-2011 17:34:19] PHP Warning:  mysql_connect() [<a href='function.mysql-connect'>function.mysql-connect</a>]: Access denied for user 'oraig_oraigg'@'localhost' (using password: YES) in /home/oraig/public_html/idiomes/angles/words.php on line 21
-[01-Feb-2011 17:35:32] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/oraig/public_html/idiomes/angles/words.php on line 28
-[01-Feb-2011 17:41:09] PHP Warning:  mysql_fetch_array(): supplied argument is not a valid MySQL result resource in /home/oraig/public_html/idiomes/angles/words.php on line 28
-[10-Apr-2011 10:40:15] PHP Warning:  Cannot modify header information - headers already sent by (output started at /home/oraig/public_html/idiomes/angles/words.php:15) in /home/oraig/public_html/idiomes/angles/words.php on line 20
