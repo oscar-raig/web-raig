@@ -1,7 +1,7 @@
 import './main.css';
 import React from 'react';
 
-export default class Hello extends React.Component {
+export default class BreadCrumb extends React.Component {
   render() {
 	return (
       <div >

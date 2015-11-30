@@ -1,8 +1,9 @@
 import React from 'react';
-import Hello from './component.jsx';
-
+import BreadCrumb from './breadCrumb.jsx';
+import MainTitle from './mainTitle.jsx';
 main();
 
 function main() {
-    React.render(<Hello/>, document.getElementById('home'));
+    React.render(<BreadCrumb/>, document.getElementById('home'));
+    React.render(<MainTitle/>, document.getElementById('principal_header'));
 }
