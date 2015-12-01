@@ -64,7 +64,7 @@
 
 	function main() {
 	    _react2['default'].render(_react2['default'].createElement(_breadCrumbJsx2['default'], null), document.getElementById('home'));
-	    _react2['default'].render(_react2['default'].createElement(_mainTitleJsx2['default'], null), document.getElementById('principal_header'));
+	    _react2['default'].render(_react2['default'].createElement(_mainTitleJsx2['default'], { title: 'Benvinguts a la pàgina  de l Oscar Raig!!!' }), document.getElementById('principal_header'));
 	}
 
 /***/ },
@@ -20069,7 +20069,7 @@
 					_react2['default'].createElement(
 						'h1',
 						null,
-						'Benvingutss a la pàgina  de l Oscar Raig!!!'
+						this.props.title
 					),
 					_react2['default'].createElement(
 						'a',
