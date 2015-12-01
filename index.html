@@ -20,7 +20,6 @@
 	<div id="principal">
 		 <div id="principal_header">
 		 </div>
-		 <script src="bundle.js"></script>
 		<!-- <div id="principal_body"> -->
 				<div class="bloc_esquerra">
 					<a class="anchor_boxes" href= "http://www.raig.cat/personal/personal_index.html">Alguna cosa sobre mi ...</a>
@@ -62,18 +61,17 @@
 	
 	</div>
 	<script type="text/javascript">
+		  var _gaq = _gaq || [];
+		  _gaq.push(['_setAccount', 'UA-22949932-1']);
+		  _gaq.push(['_trackPageview']);
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-22949932-1']);
-  _gaq.push(['_trackPageview']);
+		  (function() {
+		    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+		    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+		    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		  })();
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
-	
+	</script>
+	 <script src="bundle.js"></script>
 	</body>
 </html>

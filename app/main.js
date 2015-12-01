@@ -5,5 +5,5 @@ main();
 
 function main() {
     React.render(<BreadCrumb/>, document.getElementById('home'));
-    React.render(<MainTitle/>, document.getElementById('principal_header'));
+    React.render(<MainTitle title="Benvinguts a la p&agrave;gina  de l Oscar Raig!!!"/>, document.getElementById('principal_header'));
 }
