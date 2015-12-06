@@ -4,6 +4,7 @@ import MainTitle from './mainTitle.jsx';
 import config from '../config/';
 import Block_with_list from '../components/block_with_list.jsx'
 import Icons_bundle from '../components/icons_bundle.jsx'
+import Aanlytics from '../components/analytics.jsx'
 main();
 
 function main() {
@@ -20,7 +21,10 @@ function main() {
    		href_title="Alguna cosa sobre miii	" />, 
    		document.getElementById('firstBlock'));
 
-   	    React.render(<Icons_bundle/> ,document.getElementById('icons_div'));
+   	React.render(<Icons_bundle/> ,document.getElementById('icons_div'));
+
+   	    analytics_div
+   	React.render(<Aanlytics/> ,document.getElementById('analytics_div'));
    
     console.log("Oscar was here!!" + config.rootdirectory);
 }

@@ -19,7 +19,10 @@
   "dependencies": {
     "babel-core": "^5.8.25",
     "babel-loader": "^5.3.2",
+    "history": "^1.14.0",
     "react": "^0.14.0",
+    "react-g-analytics": "^0.1.16",
+    "react-router": "^1.0.1",
     "webpack-dev-server": "^1.12.0"
   }
 }
