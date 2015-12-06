@@ -8,9 +8,7 @@ main();
 function main() {
 
 	var dataBreadCrumb = [
-  		{link: "http://www.raig.cat", linkName: "Inici"},
-  		{link: "http://www.raig.cat/personal/personal_index.html", linkName: "Personal"},
-
+  		{link: "http://www.raig.cat", linkName: "Inici"}
 	];
 
     React.render(<BreadCrumb data = {dataBreadCrumb} />, document.getElementById('home'));
