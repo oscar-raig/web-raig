@@ -3,6 +3,7 @@ import BreadCrumb from './breadCrumb.jsx';
 import MainTitle from './mainTitle.jsx';
 import config from '../config/';
 import Block_with_list from '../components/block_with_list.jsx'
+import Icons_bundle from '../components/icons_bundle.jsx'
 main();
 
 function main() {
@@ -18,6 +19,8 @@ function main() {
    	React.render(<Block_with_list href="/personal/personal_index.html"  
    		href_title="Alguna cosa sobre miii	" />, 
    		document.getElementById('firstBlock'));
+
+   	    React.render(<Icons_bundle/> ,document.getElementById('icons_div'));
    
     console.log("Oscar was here!!" + config.rootdirectory);
 }
