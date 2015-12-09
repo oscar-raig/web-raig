@@ -10,8 +10,8 @@ export default class Block_with_list extends React.Component {
     	width: '220px',
 //    	height: '400px',
     	boxShadow:'0 1px 2px 0 rgba(0,0,0,0.22)',
-    	borderRadius:'11px 32px 10px 10px',
-    	top:'240px',
+    	borderRadius:'15px 15px 10px 10px',
+    	top:'300px',
     	left:'240px',
  //   	borderColor:'red',
   //  	border:'solid 5px'
@@ -20,7 +20,7 @@ export default class Block_with_list extends React.Component {
 	};
 	bloc_esquerra_style.left = position + 'px';
 	if( this.props.row == "2")
-		bloc_esquerra_style.top = '580px';
+		bloc_esquerra_style.top = '680px';
 
 	var image_style = {
 		width:'100%',

@@ -31,14 +31,7 @@ body
 }
 
 
-#menu
-{
-	background-color:#f0f0f0;;
-	position:absolute;
-	left:0;
-	top:0;
-	width:100%;
-}
+
 
 #home {
 	width:100%;
@@ -63,6 +56,7 @@ body
 	clear:left;
 	padding:10px;
 	padding-top:5px;
+	display:inline;
 }
 
 .bloc_esquerra
