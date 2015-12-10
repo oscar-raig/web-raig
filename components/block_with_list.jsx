@@ -5,22 +5,20 @@ export default class Block_with_list extends React.Component {
  render() {
  	var position = 170 + (this.props.column * 240);
  	var bloc_esquerra_style = {
- 		position:'absolute',
+ 	//	position:'absolute',
     	float: 'left',
     	width: '220px',
-//    	height: '400px',
     	boxShadow:'0 1px 2px 0 rgba(0,0,0,0.22)',
     	borderRadius:'15px 15px 10px 10px',
-    	top:'300px',
-    	left:'240px',
- //   	borderColor:'red',
-  //  	border:'solid 5px'
+    //	top:'300px',
+    //	left:'240px',
   		display: 'inline-block',
   		backgroundColor:'white',
+  		margin:'10px',
 	};
-	bloc_esquerra_style.left = position + 'px';
-	if( this.props.row == "2")
-		bloc_esquerra_style.top = '680px';
+	// bloc_esquerra_style.left = position + 'px';
+	//if( this.props.row == "2")
+	//	bloc_esquerra_style.top = '680px';
 
 	var image_style = {
 		width:'100%',
@@ -36,7 +34,6 @@ export default class Block_with_list extends React.Component {
 
 	var div_style_bottom = {
 		backgroundColor:'white',
-//		width: '220px',
 		margin:'10px'
 	}
 	var anchor_style = {
