@@ -22,21 +22,18 @@ function main() {
   
    	React.render(<Block_with_list href="/personal/personal_index.html"  
    		href_title="Alguna cosa sobre miii	"
-   		column = "0"
    		image="imatges/oscar_raig_image.jpg"/>,
    		
    		document.getElementById('firstBlock'));
 
    	React.render(<Block_with_list href="/clau_primaria/clau_primaria_index.html"  
    		href_title="Alguns temes d'Inform&agrave;tica"  
-   		column = "1"
    		image="imatges/matrix_image.png"/>,
    		
    		document.getElementById('secondBlock'));
 
    	React.render(<Block_with_list href="/collector_obert/collector_obert_index.html"  
    		href_title="Col.lector obert: Alguns temes d'Electr&ograve;nica"  
-   		column = "2"
    		image="imatges/open_collector_image.png"/>,
    		
    		document.getElementById('thirdBlock'));
@@ -44,15 +41,12 @@ function main() {
 
    	React.render(<Block_with_list href="/cerveses/cerveses_index.html"  
    		href_title="L'apasionant m&oacute;n de les cerveses"  
-   		column = "3"
    		image="imatges/beer_image.jpg"/>,
    		
    		document.getElementById('fourthBlock'));
 
    		React.render(<Block_with_list href="/receptes/receptes_index.html"  
    		href_title="Receptes de cuina"  
-   		column = "0"
-   		row= "2"
    		image="imatges/callos_imatge.jpg"/>,
    		
    		document.getElementById('secondRowfirstBlock'));
