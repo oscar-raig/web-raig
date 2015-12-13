@@ -11,7 +11,7 @@ export default class VideoImage extends React.Component {
 	handleClick(event) {
 		var  data = event.target.getAttribute("src");
     	var idVideo = this.getIdVideo(data)
-    	var newUrlVideo = "http://www.youtube.com/embed/" + idVideo;
+    	var newUrlVideo = "http://www.youtube.com/embed/" + idVideo + "?autoplay=1";
     					
     	event.target.ownerDocument.getElementById('iframeYouTube').setAttribute("src",newUrlVideo);
   	}
