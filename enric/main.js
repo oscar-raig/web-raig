@@ -1,6 +1,7 @@
 
 import React from 'react';
 import VideoImage from '../components/videoImage.jsx';
+import ContainerVidoeImage from '../components/containerVideoImage.jsx';
 
 main();
 
@@ -22,6 +23,19 @@ function main() {
 
 	React.render(<VideoImage videoid="osXurFN0lG8" />, document.getElementById('seven-video'));
 	
+	var dataVideo = {
+		"list_videos" :[
+		"k-ZOWxVoxmY",
+		"osXurFN0lG8",
+		"SMFVBAbEDJI",
+		"HW0O8-wVJM0",
+		"wADfcksLLyQ",
+		"Kf3pL9KDQlk"
+		]
+	};
+
+	React.render(<ContainerVidoeImage listofvideos={dataVideo}/> ,  
+		document.getElementById('elements_of_group_bottom'));
 
 	console.log("Oscar and Enric were here!!"); 
 }

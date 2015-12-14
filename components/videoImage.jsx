@@ -18,14 +18,20 @@ export default class VideoImage extends React.Component {
   	
   	render() {
 
-	  	var vidoe_image_style = {
+	  	var video_image_style = {
 	  		width:"100%",
 			height:"100%"
 		};
+
+		if(this.props.horizontal == "true") {
+			video_image_style.width = "100%";
+			video_image_style.height = "100%";
+		}
+		
 			 
 		var urlYoutube = "http://img.youtube.com/vi/" + this.props.videoid + "/0.jpg";
 	  	
-	    return (<img style={vidoe_image_style} src={urlYoutube} onClick={this.handleClick.bind(this)} />);
+	    return (<img style={video_image_style} src={urlYoutube} onClick={this.handleClick.bind(this)} />);
 	 }
 };
 
