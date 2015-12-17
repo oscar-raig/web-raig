@@ -1,6 +1,6 @@
 import React from 'react';
-import BreadCrumb from '../appindex/breadCrumb.jsx';
-import MainTitle from './../appindex/mainTitle.jsx';
+import BreadCrumb from '../components/breadCrumb.jsx';
+import MainTitle from '../components/mainTitle.jsx';
 
 import config from '../config/';
 main();
@@ -13,7 +13,8 @@ function main() {
 	];
     React.render(<BreadCrumb  data = {dataBreadCrumb} />, 
     	document.getElementById('home'));
-    React.render(<MainTitle title="Qui soc?" rootdir="localhost" 
+
+    React.render(<MainTitle title="Qui sSoc?" rootdir="localhost" image_width="70%"
      imageMainTitle="thumbs/thumb_circ_colomers_llac_50.jpg" />, 
      document.getElementById('principal_header'));
 

@@ -10,10 +10,10 @@ var definePlugin = new webpack.DefinePlugin({
 
 
 module.exports = {
-    entry: path.resolve(__dirname, './apppersonal/main.js'),
+    entry: path.resolve(__dirname, './personal/main.js'),
     output: {
         path: path.resolve(__dirname, './'),
-        filename: 'apppersonal/apppersonal.js',
+        filename: 'apppersonal.js',
     },
     module: {
     loaders: [

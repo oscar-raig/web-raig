@@ -10,7 +10,7 @@ var definePlugin = new webpack.DefinePlugin({
 
 
 module.exports = {
-    entry: path.resolve(__dirname, './appindex/main.js'),
+    entry: path.resolve(__dirname, './main.js'),
     output: {
         path: path.resolve(__dirname, './'),
         filename: 'appindex.js',
