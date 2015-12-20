@@ -6,7 +6,7 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "build:dev": "webpack -p --config webpack_appindex.development.js && webpack -p --config webpack_apppersonal.development.js",
-    "build:pro": "webpack -p --config webpack_appindex.production.js &&   webpack -p --config webpack_apppersonal.production.js &&   webpack -p --config webpack_enric.js",
+    "build:pro": "webpack -p --config webpack_appindex.production.js &&   webpack -p --config webpack_apppersonal.production.js &&   webpack -p --config webpack_enric.js && webpack -p --config webpack_apppersonal_que_es_llegir.production.js",
     "dev-index": "webpack-dev-server --devtool eval --progress --colors --hot --content-base -p --config webpack_appindex.development.js",
     "dev-enric": "webpack-dev-server --devtool eval --progress --colors --hot --content-base -p --config webpack_enric.js",
     "dev-personal": "webpack-dev-server --devtool eval --progress --colors --hot --content-base -p --config webpack_apppersonal.development.js"
