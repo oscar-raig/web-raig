@@ -10,10 +10,15 @@ var definePlugin = new webpack.DefinePlugin({
 
 
 module.exports = {
-    entry: path.resolve(__dirname, './personal/main.js'),
+    entry:{ 
+	appindex:path.resolve(__dirname, './main.js'),
+	apppersonal:path.resolve(__dirname, './personal/main.js'),		
+	appenric:path.resolve(__dirname, './enric/main.js'),
+	appqueesllegir:path.resolve(__dirname,'./personal/que_es_llegir/main.js')
+    },
     output: {
         path: path.resolve(__dirname, './'),
-        filename: 'apppersonal.js',
+        filename: '[name].bundle.js',
     },
     module: {
     loaders: [
